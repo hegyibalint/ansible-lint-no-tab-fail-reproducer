@@ -1,5 +1,0 @@
----
-- name: Failing example
-  ansible.builtin.lineinfile:
-    path: "/tmp/tab"
-    line: "this\thas\ttabs"

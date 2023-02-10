@@ -1,13 +1,12 @@
 ---
-- name: Happy-path example
+- name: Reproduce 'no-tabs' issues
+  hosts: all
 
   roles:
-    # Will fail in here
-    - no-tab-fail
+    - no_tab_fail
 
   tasks:
-    # Works like a charm in here
-    - name: Working example
+    - name: Failing playbook example
       ansible.builtin.lineinfile:
         path: "/tmp/tab"
         line: "this\thas\ttabs"
