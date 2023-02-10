@@ -1,0 +1,13 @@
+---
+- name: Happy-path example
+
+  roles:
+    # Will fail in here
+    - no-tab-fail
+
+  tasks:
+    # Works like a charm in here
+    - name: Working example
+      ansible.builtin.lineinfile:
+        path: "/tmp/tab"
+        line: "this\thas\ttabs"
